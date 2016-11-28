@@ -28,7 +28,7 @@ new MikroFram.db({
   } else {
     API.models = models;
     app.use('/api', MikroFram.generators.routes());
-    app.listen(process.env.PORT || 3000, function () {
+    app.listen(process.env.PORT || 3000, 'localhost', function () {
       console.log('Listening on port ' + (process.env.PORT || 3000));
     });
   }

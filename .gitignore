@@ -1,5 +1,4 @@
 node_modules
 *.sqlite
 uploads/
-public/
 npm-debug.log
