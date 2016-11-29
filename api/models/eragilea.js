@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     mota: DataTypes.STRING, // kolektiboa, norbanako
     abizenak: DataTypes.STRING,
     izena: DataTypes.STRING,
+    bio: DataTypes.TEXT,
     telefonoa: DataTypes.STRING,
     eposta: DataTypes.STRING,
     twitter: DataTypes.STRING,

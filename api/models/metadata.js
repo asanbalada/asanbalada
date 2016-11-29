@@ -1,16 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
-  var Proposamena = sequelize.define('proposamena', {
-    start: DataTypes.DATE,
-    end: DataTypes.DATE,
+  var Metadata = sequelize.define('metadata', {
     title: DataTypes.STRING,
+    description: DataTypes.TEXT,
     content: DataTypes.TEXT,
-    type: DataTypes.STRING,
-    status: DataTypes.STRING,
-    uuid: DataTypes.STRING,
-    sended: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
     metadata: {
       type: DataTypes.TEXT,
       allowNull: true,
@@ -28,14 +20,7 @@ module.exports = function(sequelize, DataTypes) {
         this.setDataValue('metadata', val);
       }
     }
-  }, {
-    hooks: {
-        afterCreate: function (instance) {
-          instance.uuid = (process.env.ASANBALADA_UUID_PREFIX || 'PROP') + instance.dataValues.id;
-          instance.save();
-        }
-    }
   });
 
-  return Proposamena;
+  return Metadata;
 };

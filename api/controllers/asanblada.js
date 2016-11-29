@@ -29,6 +29,9 @@ module.exports = {
           }, {
             model: API.models.baliabidea,
             as: 'baliabideak'
+          }, {
+            model: API.models.lantaldea,
+            as: 'lantaldeak'
           }]
       }, {
         model: API.models.eragilea,
@@ -156,6 +159,7 @@ function upsertProposamena (data, asanblada) {
           return Promise.all(
             [proposamena.setLagunak(_.map(data.lagunak, 'id')),
             proposamena.setAntolatzaileak(_.map(data.antolatzaileak, 'id')),
+            proposamena.setLantaldeak(_.map(data.lantaldeak, 'id')),
             proposamena.setRefs(_.map(data.refs, 'id')),
             proposamena.setBaliabideak(_.map(data.baliabideak, 'id')),
             proposamena.setAsanblada(asanblada)]
@@ -169,6 +173,7 @@ function upsertProposamena (data, asanblada) {
         return Promise.all(
           [proposamena.setLagunak(_.map(data.lagunak, 'id')),
           proposamena.setAntolatzaileak(_.map(data.antolatzaileak, 'id')),
+          proposamena.setLantaldeak(_.map(data.lantaldeak, 'id')),
           proposamena.setRefs(_.map(data.refs, 'id')),
           proposamena.setBaliabideak(_.map(data.baliabideak, 'id')),
           proposamena.setAsanblada(asanblada)]

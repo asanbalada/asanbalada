@@ -1,11 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
-  var Asanblada = sequelize.define('asanblada', {
-    date: DataTypes.DATE,
-    content: DataTypes.TEXT,
-    sended: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
+  var Eposta = sequelize.define('eposta', {
+    title: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    subject: DataTypes.STRING,
+    body: DataTypes.TEXT,
     metadata: {
       type: DataTypes.TEXT,
       allowNull: true,
@@ -25,5 +23,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  return Asanblada;
+  return Eposta;
 };

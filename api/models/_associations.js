@@ -97,7 +97,16 @@ module.exports = {
         },
         through: 'proposamena_baliabidea'
       }
-    }
+    },
+    lantaldea: {
+      belongsToMany: [{
+        as: {
+          singular: 'lantaldea',
+          plural: 'lantaldeak'
+        },
+        through: 'proposamena_lantaldea'
+      }]
+    },
   },
   asanblada: {
     proposamena: {
@@ -160,6 +169,15 @@ module.exports = {
           plural: 'lantaldeak'
         },
         through: 'asanblada_lantaldea'
+      }
+    },
+    proposamena: {
+      belongsToMany: {
+        as: {
+          singular: 'proposamena',
+          plural: 'proposamenak'
+        },
+        through: 'proposamena_lantaldea'
       }
     }
   },

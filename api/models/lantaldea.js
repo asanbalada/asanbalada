@@ -2,6 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   var Lantaldea = sequelize.define('lantaldea', {
     title: DataTypes.STRING,
     description: DataTypes.TEXT,
+    email: DataTypes.STRING,
     metadata: {
       type: DataTypes.TEXT,
       allowNull: true,

@@ -2,10 +2,6 @@ module.exports = {
   all: function (req, res) {
     req.model.findAll({
       include: [{
-        model: API.models.eragilea,
-        as: 'kideak'
-      },
-      {
         model: API.models.lantaldea,
         as: 'lantaldea'
       }]
@@ -34,7 +30,7 @@ module.exports = {
       item.setKideak(_.map(req.body.kideak, 'id')).then(function(){
         API.services.postazerrenda.sync.list(item);
       });
-      
+
       return res.json(item);
     });
   },
