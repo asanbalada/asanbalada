@@ -55,6 +55,12 @@ Klonatu git biltegia eta exekutatu `npm install`
 |ASANBALADA_UUID_PREFIX|proposamenen uuid-aren aurrizkia. Proposamen id-a gehitzen zaio (PROP115)|ez|PROP|NIREID|
 |ASANBALADA_DEMO|Funtzionaltasun guztiak frogatu postazerrendak benetan kudeatu zein epostak bidali gabe|ez||true|
 
+## API giltzak
+[Hemen](https://ovh.github.io/node-ovh/#gettingStarted) dago giltzak lortzeko informazioa. Asanbaladak badakar `authorize.js`, exekutatu:
+``` bash
+ASANBALADA_OVH_APP_KEY=zure_giltza ASANBALADA_OVH_APP_SECRET=zure_scret ASANBALADA_OVH_ENDPOINT=api_zerbitzaria node authorize.js
+```
+
 ## Martxan jarri
 Beharrezko aldagaiak ezarri eta exekutatu `npm start`:
 ``` bash
