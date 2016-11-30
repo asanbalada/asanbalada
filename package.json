@@ -1,6 +1,6 @@
 {
   "name": "asanbalada",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -18,7 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "ASANBALADA_DEMO=true node index.js"
   },
   "author": "jimakker",
   "license": "MIT"

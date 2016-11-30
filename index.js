@@ -20,7 +20,7 @@ global.API = API = {
 };
 
 new MikroFram.db({
-  dbPath:  __dirname + '/db.sqlite',
+  dbPath:  process.env.ASANBALADA_DB_PATH || __dirname + '/db.sqlite',
   modelsPath: __dirname + '/api/models'
 }, function(err, models){
   if(err) {
@@ -28,8 +28,8 @@ new MikroFram.db({
   } else {
     API.models = models;
     app.use('/api', MikroFram.generators.routes());
-    app.listen(process.env.PORT || 3000, 'localhost', function () {
-      console.log('Listening on port ' + (process.env.PORT || 3000));
+    app.listen(process.env.ASANBALADA_PORT || 3000, 'localhost', function () {
+      console.log('Listening on port ' + (process.env.ASANBALADA_PORT || 3000));
     });
   }
 });

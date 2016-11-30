@@ -1,9 +1,9 @@
 var Promise = require('bluebird');
 var ovh = require('ovh')({
-  endpoint: process.env.OVH_ENDPOINT || 'ovh-eu',
-  appKey: process.env.OVH_APP_KEY || 'demo',
-  appSecret: process.env.OVH_APP_SECRET || 'demo',
-  consumerKey: process.env.OVH_APP_CONSUMER_KEY || 'demo'
+  endpoint: process.env.ASANBALADA_OVH_ENDPOINT || 'ovh-eu',
+  appKey: process.env.ASANBALADA_OVH_APP_KEY || 'demo',
+  appSecret: process.env.ASANBALADA_OVH_APP_SECRET || 'demo',
+  consumerKey: process.env.ASANBALADA_OVH_APP_CONSUMER_KEY || 'demo'
 });
 
 function getSubscribers (domain, name) {
