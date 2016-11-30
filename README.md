@@ -1,6 +1,9 @@
 # ASANBALADA
 Asabladak kudeatu eta errazteko erreminta (prototipoa).
 
+## Biltegia
+https://gitlab.com/asanbalada/asanbalada
+
 ## Funtzionaltasunak
 * Kideen (zein besteen) kontaktu zerrenda
 * Asanbladaren akta jasotzeko interfazea
