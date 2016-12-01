@@ -5,7 +5,7 @@ WORKDIR /asanbalada
 ADD api api
 ADD lib lib
 ADD public public
-ADD index.js package.json .
+ADD index.js package.json ./
 RUN npm install
 
 CMD ["npm", "start"]
